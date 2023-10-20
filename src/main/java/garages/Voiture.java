@@ -69,11 +69,7 @@ public class Voiture {
      * @return vrai si la voiture est dans un garage, faux sinon
      */
     public boolean estDansUnGarage() {
-        // TODO: Implémenter cette méthode
-        if ((myStationnements.isEmpty()) || !myStationnements.get(myStationnements.size() - 1).estEnCours()) {
-            return false;
-        }
-        return true;
+        return (!myStationnements.isEmpty()) && myStationnements.get(myStationnements.size() - 1).estEnCours();
         // Vrai si le dernier stationnement est en cours
     }
 
