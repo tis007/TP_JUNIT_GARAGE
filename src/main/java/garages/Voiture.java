@@ -91,10 +91,7 @@ public class Voiture {
      */
     public void imprimeStationnements(PrintStream out) {
         // TODO: Implémenter cette méthode
-        HashSet<Garage> garagesList = new HashSet<>();
-        for (Stationnement s : myStationnements){
-            garagesList.add(s.getGarage());
-        }
+        HashSet<Garage> garagesList = (HashSet<Garage>) this.garagesVisites();
 
         for (Garage g : garagesList){
             out.println(g.toString());
